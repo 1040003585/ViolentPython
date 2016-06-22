@@ -1,0 +1,12 @@
+Ability Server 2.34
+Spipe 1.0
+TelSrv 1.5
+Xitami
+YahooPOPs! Simple Main Transfer Service Ready
+WDaemon 6.8.5
+WinGate 6.1.1
+
+hello, I am server.
+wu
+
+
