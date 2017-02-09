@@ -1,7 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import optparse
-import pxssh
+#import pxssh
+from pexpect import pxssh
 
 
 class Client:
@@ -40,9 +41,13 @@ def addClient(host, user, password):
 
 
 botNet = []
-addClient('127.0.0.1', 'root', 'toor')
-addClient('127.0.0.1', 'root', 'toor')
-addClient('127.0.0.1', 'root', 'toor')
+#addClient('127.0.0.1', 'root', 'wu.com')
+addClient('127.0.0.1', 'wu_being', 'wu.com')
+addClient('127.0.0.1', 'wu_being', 'wu.com')
+addClient('localhost', 'wu_being', 'wu.com')
+#addClient('localhost', 'root', 'toor')
 
 botnetCommand('uname -v')
+#botnetCommand('ls')
 botnetCommand('cat /etc/issue')
+

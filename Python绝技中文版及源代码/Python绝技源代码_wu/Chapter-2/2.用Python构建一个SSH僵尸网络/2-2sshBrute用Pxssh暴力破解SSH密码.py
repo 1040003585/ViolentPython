@@ -1,7 +1,10 @@
-import pxssh
+# -*- coding: utf-8 -*-
+
 import optparse
 import time
 from threading import *
+#import pxssh
+from pexpect import pxssh
 
 maxConnections = 5
 connection_lock = BoundedSemaphore(value=maxConnections)
@@ -69,4 +72,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-
+#python 2-2sshBrute用Pxssh暴力破解SSH密码.py  -H localhost -u wu_being -F pass

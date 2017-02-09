@@ -35,11 +35,12 @@ def connect(user, host, password):
 
 def main():
     host = 'localhost'
-    user = 'root'
-    password = 'toor'
+    user = 'wu_being'
+    password = 'wu.com'
     
     child = connect(user, host, password)
-    send_command(child, 'cat /etc/shadow | grep root')
+    #send_command(child, 'sudo cat /etc/shadow | grep root')
+    send_command(child, 'ls')
 
 if __name__ == '__main__':
     main()

@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-import pxssh
-
+#import pxssh
+from pexpect import pxssh
 
 def send_command(s, cmd):
     s.sendline(cmd)
@@ -18,6 +18,7 @@ def connect(host, user, password):
         print '[-] Error Connecting'
         exit(0)
 
-s = connect('127.0.0.1', 'root', 'toor')
-send_command(s, 'cat /etc/shadow | grep root')
+s = connect('127.0.0.1', 'wu_being', 'wu.com')
+#send_command(s, 'cat /etc/shadow | grep root')
+send_command(s, 'ls')
 
