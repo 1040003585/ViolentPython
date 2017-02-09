@@ -44,8 +44,8 @@ addClient('127.0.0.2', 'wu_being', 'wu.com')
 addClient('localhost', 'wu_being', 'wu.com')
 #addClient('121.42.199.205', 'root', 'since2016')
 
-botnetCommand('uname -v\n')
-botnetCommand('ls\n')
-botnetCommand('ping www.baidu.com -c 4\n')
+botnetCommand('uname -v')
+botnetCommand('ls')
+botnetCommand('ping www.baidu.com -c 4')
 #botnetCommand('cat /etc/issue')
 
