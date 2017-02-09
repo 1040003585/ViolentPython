@@ -40,7 +40,7 @@ def addClient(host, user, password):
 botNet = []
 #addClient('127.0.0.1', 'root', 'wu.com')
 addClient('127.0.0.1', 'wu_being', 'wu.com')
-addClient('127.0.0.1', 'wu_being', 'wu.com')
+addClient('127.0.0.2', 'wu_being', 'wu.com')
 addClient('localhost', 'wu_being', 'wu.com')
 #addClient('121.42.199.205', 'root', 'since2016')
 
