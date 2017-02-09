@@ -32,7 +32,7 @@ def botnetCommand(command):
     for client in botNet:
         output = client.send_command(command)
         print '[*] Output from ' + client.host
-        print '[+] ' + output 
+        #print '[+] ' + output 
 
 
 def addClient(host, user, password):
