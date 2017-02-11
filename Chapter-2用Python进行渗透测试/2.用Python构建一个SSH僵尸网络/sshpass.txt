@@ -1,2 +1,3 @@
-wu_being:wu.com:127.0.0.1
-wu_being:wu.com:127.0.0.2
+wu_being@127.0.0.1@wu.com
+wu_being@127.0.0.2@wu.com
+
